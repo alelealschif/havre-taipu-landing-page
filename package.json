@@ -1,0 +1,15 @@
+{
+  "name": "havre-taipu-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page trilíngue do Havre Taipu Boutique.",
+  "scripts": {
+    "test": "node --check script.js"
+  },
+  "keywords": [
+    "havre-taipu",
+    "landing-page",
+    "boutique-hotel"
+  ],
+  "author": "Alessandra Leal",
+  "license": "UNLICENSED"
+}
