@@ -43,7 +43,7 @@ const nav = document.querySelector(".site-nav");
 const heroVideo = document.querySelector(".hero-video");
 
 if (heroVideo) {
-  const playHeroVideo = () => {
+  const tryPlayHeroVideo = () => {
     heroVideo.muted = true;
     heroVideo.defaultMuted = true;
     heroVideo.playsInline = true;
@@ -56,14 +56,16 @@ if (heroVideo) {
   heroVideo.setAttribute("muted", "");
   heroVideo.setAttribute("playsinline", "");
   heroVideo.setAttribute("webkit-playsinline", "");
-  heroVideo.load();
-  playHeroVideo();
-  heroVideo.addEventListener("loadedmetadata", playHeroVideo, { once: true });
-  heroVideo.addEventListener("canplay", playHeroVideo, { once: true });
-  window.addEventListener("pageshow", playHeroVideo);
+  document.addEventListener("DOMContentLoaded", tryPlayHeroVideo, { once: true });
+  heroVideo.addEventListener("loadedmetadata", tryPlayHeroVideo, { once: true });
+  heroVideo.addEventListener("loadeddata", tryPlayHeroVideo, { once: true });
+  heroVideo.addEventListener("canplay", tryPlayHeroVideo, { once: true });
+  window.addEventListener("load", tryPlayHeroVideo, { once: true });
+  window.addEventListener("pageshow", tryPlayHeroVideo);
   document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) playHeroVideo();
+    if (document.visibilityState === "visible") tryPlayHeroVideo();
   });
+  tryPlayHeroVideo();
 }
 
 function closeMenu() {

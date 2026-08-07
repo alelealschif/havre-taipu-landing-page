@@ -155,7 +155,7 @@ p{margin:0 0 20px}
 .lightbox-nav.prev{left:4px}.lightbox-nav.next{right:4px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.destination-card.reveal{opacity:1;transform:none;transition:none}.hero-video{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.destination-card.reveal{opacity:1;transform:none;transition:none}}
 @media (min-width:720px){
   .section{padding:60px 0}.container{width:min(calc(100% - 96px),var(--container))}
   .site-header{padding-inline:48px}.hero-content{width:min(calc(100% - 96px),1100px)}
