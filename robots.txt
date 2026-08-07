@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alelealschif.github.io/havre-taipu-landing-page/sitemap.xml

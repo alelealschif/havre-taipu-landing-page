@@ -1,48 +1,42 @@
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+window.addEventListener("load", () => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
+window.addEventListener("pageshow", () => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
+
 const translations = {
   pt: {
-    skip:"Pular para o conteúdo",navApartment:"O refúgio",navGallery:"Galeria",navDestination:"Taipu de Fora",navContact:"Contato",
-    heroOverline:"Taipu de Fora · Bahia",heroTitle:"Onde a natureza encontra o luxo discreto.",heroText:"Um refúgio boutique para desacelerar, respirar e viver a Bahia com serenidade.",heroCta:"Reserve aqui",scroll:"Explore",bookingPrompt:"Seu refúgio em Taipu de Fora espera por você.",
+    skip:"Pular para o conteúdo",navApartment:"O refúgio",navGallery:"Galeria",navDestination:"Taipu de Fora",
+    heroOverline:"TAIPU DE FORA • BAHIA",heroTitle:"Seu refúgio em Taipu de Fora",heroText:"Aluguel de temporada a poucos passos das piscinas naturais, com conforto, privacidade e tudo o que você precisa para viver dias inesquecíveis na Bahia.",heroCta:"Reservar agora",scroll:"Explore",bookingPrompt:"Seu refúgio em Taipu de Fora espera por você.",bookingCta:"Reserve aqui",
     introOverline:"Seu santuário particular",introTitle:"Arquitetura tropical, conforto contemporâneo.",introLead:"No Havre Taipu, madeira, luz e paisagismo se encontram em uma atmosfera naturalmente elegante.",introBody:"Os espaços se abrem para o jardim e a piscina, criando uma experiência fluida entre interior e exterior — um convite ao descanso em um dos cenários mais especiais da Bahia.",imageNote:"Design que deixa a paisagem entrar.",
     amenitiesOverline:"Essenciais do bem-estar",amenitiesTitle:"Detalhes que transformam a estadia.",amenitiesNote:"Comodidades confirmadas pelas imagens fornecidas.",amenity1:"Piscina ao ar livre",amenity1Text:"Água e jardim compondo um cenário reservado.",amenity2:"Cozinha equipada",amenity2Text:"Um espaço funcional integrado à área social.",amenity3:"Varanda com rede",amenity3Text:"Para tardes lentas sob a arquitetura de madeira.",amenity4:"Ambientes climatizados",amenity4Text:"Conforto nos quartos em todas as estações.",
-    galleryOverline:"Galeria Havreniana",galleryTitle:"Uma casa que respira Bahia.",galleryText:"Texturas naturais, espaços generosos e a calma de um jardim tropical.",galleryMore:"Ver mais ambientes ↗",galleryLess:"Ver menos",
+    galleryOverline:"Galeria",galleryTitle:"Uma casa que respira Bahia.",galleryText:"Texturas naturais, espaços generosos e a calma de um jardim tropical.",galleryMore:"Ver mais ambientes ↗",galleryLess:"Ver menos",
     tourOverline:"Tour virtual",tourTitle:"Sinta o ritmo da casa.",tourText:"Percorra os ambientes e descubra a conexão entre arquitetura, jardim e água.",tourPrev:"Anterior",tourNext:"Próximo",
     destinationOverline:"O destino",destinationTitle:"Taipu de Fora, natureza em estado de encanto.",destinationText:"Na Península de Maraú, Taipu de Fora encanta pelas piscinas naturais formadas entre os recifes na maré baixa, pelas águas cristalinas ideais para snorkel e pela extensa faixa de areia branca cercada por coqueiros. Gastronomia baiana, passeios de barco, praias reservadas e o pôr do sol sobre os corais completam a experiência — um encontro singular entre biodiversidade, tranquilidade e autenticidade.",destinationNote:"A localização exata e as orientações de chegada são compartilhadas diretamente no contato.",
-    reviewsOverline:"Palavras de quem viveu",reviewsTitle:"Histórias reais, sempre.",reviewsText:"As avaliações de hóspedes serão publicadas aqui quando forem fornecidas e verificadas pela propriedade.",
-    faqTitle:"Antes de chegar.",q1:"Onde fica o Havre Taipu?",a1:"Em Taipu de Fora, Bahia. O endereço exato é compartilhado diretamente com os hóspedes.",q2:"Como consultar uma estadia?",a2:"Envie uma mensagem pelo formulário. A equipe retornará com as informações disponíveis, sem exposição pública de tarifas.",q3:"Quais comodidades estão disponíveis?",a3:"As imagens confirmam piscina, cozinha integrada, varanda com rede e quartos climatizados. Demais itens devem ser confirmados no contato.",q4:"As fotos são do apartamento?",a4:"Sim. Toda a galeria e os vídeos desta página utilizam exclusivamente os materiais reais fornecidos pelo Havre Taipu.",
-    contactOverline:"Seu tempo em Taipu",contactTitle:"Comece a imaginar a sua estadia.",contactText:"Conte-nos sobre a viagem. Nenhuma tarifa é exibida publicamente; a conversa é pessoal.",whatsappUnavailable:"WhatsApp · contato a confirmar",name:"Nome",phone:"Telefone / WhatsApp",message:"Conte um pouco sobre a viagem",send:"Enviar solicitação",socialUnavailable:"Instagram e contato oficial não fornecidos.",floatingContact:"Falar com o Havre",
-    required:"Preencha este campo.",invalidEmail:"Informe um e-mail válido.",formReady:"Formulário validado. A integração de envio será ativada quando o contato oficial for fornecido."
+    faqTitle:"Antes de fazer as malas.",q1:"O que a casa oferece?",a1:"O Havre Taipu é uma casa de temporada completa, ideal para famílias e grupos de amigos. A propriedade conta com:",amenitySuite:"2 suítes",amenityBathrooms:"3 banheiros",amenityLiving:"Sala de estar",amenityKitchen:"Cozinha totalmente equipada",amenityVeranda:"Varanda",amenityPool:"Piscina privativa",amenityVolley:"Quadra de vôlei",amenityGarden:"Jardim tropical",amenityParking:"Estacionamento",q2:"Qual a localização?",a2:"O Havre Taipu está localizado em Taipu de Fora, na Península de Maraú, um dos destinos mais bonitos do litoral baiano.",a2Distance:"A propriedade fica aproximadamente:",a2Pool:"15 minutos das piscinas naturais de Taipu de Fora;",a2Barra:"cerca de 7 km de Barra Grande (aproximadamente 15 minutos de carro).",q3:"Como chegar?",a3:"O aeroporto mais utilizado por quem visita a região é o Aeroporto Jorge Amado (Ilhéus - BA).",a3Route:"A partir de Ilhéus, o trajeto até Taipu de Fora leva aproximadamente entre 2h30 e 3h de carro, dependendo das condições da estrada.",q4:"Há restaurantes e mercados por perto?",a4:"Sim.",a4Nearby:"Nas proximidades é possível encontrar restaurantes, bares de praia, mercados, padarias e serviços essenciais, permitindo aproveitar a estadia com conforto sem precisar percorrer grandes distâncias.",q5:"Como faço minha reserva?",a5:"As reservas são realizadas pelo Airbnb.",a5Booking:"Clique no botão “Reservar agora” presente no site para consultar disponibilidade, valores e concluir sua reserva com total segurança.",q6:"As fotos representam exatamente a propriedade?",a6:"Sim.",a6Photos:"Todas as fotografias exibidas neste site são reais e representam os ambientes da propriedade, permitindo que você conheça cada detalhe antes da sua chegada.",
   },
   en: {
-    skip:"Skip to content",navApartment:"The retreat",navGallery:"Gallery",navDestination:"Taipu de Fora",navContact:"Contact",
-    heroOverline:"Taipu de Fora · Bahia",heroTitle:"Where nature meets discreet luxury.",heroText:"A boutique retreat to slow down, breathe and experience Bahia with serenity.",heroCta:"Book here",scroll:"Explore",bookingPrompt:"Your retreat in Taipu de Fora is waiting for you.",
+    skip:"Skip to content",navApartment:"The retreat",navGallery:"Gallery",navDestination:"Taipu de Fora",
+    heroOverline:"TAIPU DE FORA • BAHIA",heroTitle:"Your retreat in Taipu de Fora",heroText:"A vacation rental just steps from the natural pools, with comfort, privacy and everything you need for unforgettable days in Bahia.",heroCta:"Book now",scroll:"Explore",bookingPrompt:"Your retreat in Taipu de Fora is waiting for you.",bookingCta:"Book here",
     introOverline:"Your private sanctuary",introTitle:"Tropical architecture, contemporary comfort.",introLead:"At Havre Taipu, wood, light and landscaping meet in a naturally elegant atmosphere.",introBody:"Spaces open onto the garden and pool, creating a fluid experience between indoors and outdoors — an invitation to unwind in one of Bahia's most special settings.",imageNote:"Design that lets the landscape in.",
     amenitiesOverline:"Wellbeing essentials",amenitiesTitle:"Details that transform a stay.",amenitiesNote:"Amenities confirmed by the supplied images.",amenity1:"Outdoor pool",amenity1Text:"Water and garden in a private setting.",amenity2:"Equipped kitchen",amenity2Text:"A functional space integrated into the social area.",amenity3:"Veranda and hammock",amenity3Text:"For slow afternoons beneath timber architecture.",amenity4:"Air-conditioned rooms",amenity4Text:"Bedroom comfort in every season.",
-    galleryOverline:"The Havre gallery",galleryTitle:"A home that breathes Bahia.",galleryText:"Natural textures, generous spaces and the calm of a tropical garden.",galleryMore:"See more spaces ↗",galleryLess:"See less",
+    galleryOverline:"Gallery",galleryTitle:"A home that breathes Bahia.",galleryText:"Natural textures, generous spaces and the calm of a tropical garden.",galleryMore:"See more spaces ↗",galleryLess:"See less",
     tourOverline:"Virtual tour",tourTitle:"Feel the rhythm of the house.",tourText:"Walk through its spaces and discover the connection between architecture, garden and water.",tourPrev:"Previous",tourNext:"Next",
     destinationOverline:"The destination",destinationTitle:"Taipu de Fora, nature in a state of wonder.",destinationText:"On the Maraú Peninsula, Taipu de Fora captivates with natural pools formed among the reefs at low tide, crystal-clear waters ideal for snorkelling and a long stretch of white sand framed by palm trees. Bahian cuisine, boat trips, secluded beaches and sunsets over the coral complete the experience — a singular blend of biodiversity, tranquility and authenticity.",destinationNote:"The exact location and arrival directions are shared directly upon contact.",
-    reviewsOverline:"Words from those who stayed",reviewsTitle:"Real stories, always.",reviewsText:"Guest reviews will appear here once supplied and verified by the property.",
-    faqTitle:"Before you arrive.",q1:"Where is Havre Taipu?",a1:"In Taipu de Fora, Bahia. The exact address is shared directly with guests.",q2:"How can I enquire about a stay?",a2:"Send a message through the form. The team will reply with available information, without publicly displaying rates.",q3:"Which amenities are available?",a3:"The images confirm a pool, integrated kitchen, veranda with hammock and air-conditioned bedrooms. Please confirm any other items upon contact.",q4:"Are these real property photos?",a4:"Yes. Every gallery image and video on this page uses only the real material supplied by Havre Taipu.",
-    contactOverline:"Your time in Taipu",contactTitle:"Start imagining your stay.",contactText:"Tell us about your trip. No rates are displayed publicly; the conversation is personal.",whatsappUnavailable:"WhatsApp · contact to be confirmed",name:"Name",phone:"Phone / WhatsApp",message:"Tell us a little about your trip",send:"Send enquiry",socialUnavailable:"Official Instagram and contact details were not supplied.",floatingContact:"Talk to Havre",
-    required:"Please complete this field.",invalidEmail:"Enter a valid email.",formReady:"Form validated. Sending will be enabled once the official contact details are supplied."
+    faqTitle:"Before packing your bags.",q1:"What does the house offer?",a1:"Havre Taipu is a complete vacation home, ideal for families and groups of friends. The property includes:",amenitySuite:"2 suites",amenityBathrooms:"3 bathrooms",amenityLiving:"Living room",amenityKitchen:"Fully equipped kitchen",amenityVeranda:"Veranda",amenityPool:"Private pool",amenityVolley:"Volleyball court",amenityGarden:"Tropical garden",amenityParking:"Parking",q2:"Where is it located?",a2:"Havre Taipu is located in Taipu de Fora, on the Maraú Peninsula, one of the most beautiful destinations on the Bahia coast.",a2Distance:"The property is approximately:",a2Pool:"15 minutes from the natural pools of Taipu de Fora;",a2Barra:"around 7 km from Barra Grande (approximately 15 minutes by car).",q3:"How do I get there?",a3:"The airport most commonly used by visitors to the region is Jorge Amado Airport (Ilhéus, Bahia).",a3Route:"From Ilhéus, the journey to Taipu de Fora takes approximately 2.5 to 3 hours by car, depending on road conditions.",q4:"Are there restaurants and markets nearby?",a4:"Yes.",a4Nearby:"Nearby you will find restaurants, beach bars, markets, bakeries and essential services, allowing you to enjoy a comfortable stay without travelling long distances.",q5:"How do I book?",a5:"Reservations are made through Airbnb.",a5Booking:"Click the “Book now” button on the website to check availability and prices and complete your booking securely.",q6:"Do the photos accurately represent the property?",a6:"Yes.",a6Photos:"All photographs shown on this website are real and represent the property’s spaces, allowing you to discover every detail before you arrive.",
   },
   fr: {
-    skip:"Aller au contenu",navApartment:"Le refuge",navGallery:"Galerie",navDestination:"Taipu de Fora",navContact:"Contact",
-    heroOverline:"Taipu de Fora · Bahia",heroTitle:"Là où la nature rencontre le luxe discret.",heroText:"Un refuge boutique pour ralentir, respirer et vivre Bahia en toute sérénité.",heroCta:"Réservez ici",scroll:"Explorer",bookingPrompt:"Votre refuge à Taipu de Fora vous attend.",
+    skip:"Aller au contenu",navApartment:"Le refuge",navGallery:"Galerie",navDestination:"Taipu de Fora",
+    heroOverline:"TAIPU DE FORA • BAHIA",heroTitle:"Votre refuge à Taipu de Fora",heroText:"Une location de vacances à quelques pas des piscines naturelles, avec confort, intimité et tout ce qu’il faut pour vivre des journées inoubliables à Bahia.",heroCta:"Réserver maintenant",scroll:"Explorer",bookingPrompt:"Votre refuge à Taipu de Fora vous attend.",bookingCta:"Réservez ici",
     introOverline:"Votre sanctuaire privé",introTitle:"Architecture tropicale, confort contemporain.",introLead:"À Havre Taipu, le bois, la lumière et le paysage se rencontrent dans une atmosphère naturellement élégante.",introBody:"Les espaces s’ouvrent sur le jardin et la piscine, créant une expérience fluide entre intérieur et extérieur — une invitation au repos dans l’un des plus beaux décors de Bahia.",imageNote:"Un design qui laisse entrer le paysage.",
     amenitiesOverline:"L’essentiel du bien-être",amenitiesTitle:"Des détails qui transforment le séjour.",amenitiesNote:"Équipements confirmés par les images fournies.",amenity1:"Piscine extérieure",amenity1Text:"L’eau et le jardin composent un cadre intime.",amenity2:"Cuisine équipée",amenity2Text:"Un espace fonctionnel intégré à la pièce de vie.",amenity3:"Véranda et hamac",amenity3Text:"Pour de lentes après-midi sous l’architecture en bois.",amenity4:"Chambres climatisées",amenity4Text:"Un confort agréable en toute saison.",
-    galleryOverline:"La galerie Havre",galleryTitle:"Une maison qui respire Bahia.",galleryText:"Textures naturelles, espaces généreux et calme d’un jardin tropical.",galleryMore:"Voir plus d’espaces ↗",galleryLess:"Voir moins",
+    galleryOverline:"Galerie",galleryTitle:"Une maison qui respire Bahia.",galleryText:"Textures naturelles, espaces généreux et calme d’un jardin tropical.",galleryMore:"Voir plus d’espaces ↗",galleryLess:"Voir moins",
     tourOverline:"Visite virtuelle",tourTitle:"Ressentez le rythme de la maison.",tourText:"Parcourez les espaces et découvrez le lien entre architecture, jardin et eau.",tourPrev:"Précédent",tourNext:"Suivant",
     destinationOverline:"La destination",destinationTitle:"Taipu de Fora, la nature à l’état d’émerveillement.",destinationText:"Sur la péninsule de Maraú, Taipu de Fora séduit par ses piscines naturelles formées entre les récifs à marée basse, ses eaux cristallines idéales pour le snorkeling et sa longue plage de sable blanc bordée de cocotiers. Cuisine bahianaise, sorties en bateau, plages préservées et couchers de soleil sur les coraux complètent l’expérience — une rencontre unique entre biodiversité, sérénité et authenticité.",destinationNote:"L’emplacement exact et les indications d’arrivée sont communiqués directement lors de la prise de contact.",
-    reviewsOverline:"Les mots de nos hôtes",reviewsTitle:"Des histoires vraies, toujours.",reviewsText:"Les avis des voyageurs seront publiés ici lorsqu’ils auront été fournis et vérifiés par la propriété.",
-    faqTitle:"Avant votre arrivée.",q1:"Où se trouve Havre Taipu ?",a1:"À Taipu de Fora, Bahia. L’adresse exacte est communiquée directement aux voyageurs.",q2:"Comment se renseigner sur un séjour ?",a2:"Envoyez un message via le formulaire. L’équipe vous répondra avec les informations disponibles, sans afficher publiquement les tarifs.",q3:"Quels équipements sont disponibles ?",a3:"Les images confirment une piscine, une cuisine intégrée, une véranda avec hamac et des chambres climatisées. Les autres équipements sont à confirmer lors du contact.",q4:"Les photos montrent-elles réellement l’appartement ?",a4:"Oui. La galerie et les vidéos de cette page utilisent exclusivement les contenus réels fournis par Havre Taipu.",
-    contactOverline:"Votre séjour à Taipu",contactTitle:"Commencez à imaginer votre séjour.",contactText:"Parlez-nous de votre voyage. Aucun tarif n’est affiché publiquement ; l’échange reste personnel.",whatsappUnavailable:"WhatsApp · contact à confirmer",name:"Nom",phone:"Téléphone / WhatsApp",message:"Parlez-nous un peu de votre voyage",send:"Envoyer la demande",socialUnavailable:"Instagram et coordonnées officielles non fournis.",floatingContact:"Contacter Havre",
-    required:"Veuillez remplir ce champ.",invalidEmail:"Saisissez une adresse e-mail valide.",formReady:"Formulaire validé. L’envoi sera activé lorsque les coordonnées officielles seront fournies."
+    faqTitle:"Avant de faire vos valises.",q1:"Que propose la maison ?",a1:"Havre Taipu est une maison de vacances complète, idéale pour les familles et les groupes d’amis. La propriété comprend :",amenitySuite:"2 suites",amenityBathrooms:"3 salles de bain",amenityLiving:"Salon",amenityKitchen:"Cuisine entièrement équipée",amenityVeranda:"Véranda",amenityPool:"Piscine privée",amenityVolley:"Terrain de volley",amenityGarden:"Jardin tropical",amenityParking:"Parking",q2:"Où se trouve la propriété ?",a2:"Havre Taipu se situe à Taipu de Fora, sur la péninsule de Maraú, l’une des plus belles destinations du littoral bahianais.",a2Distance:"La propriété se trouve à environ :",a2Pool:"15 minutes des piscines naturelles de Taipu de Fora ;",a2Barra:"environ 7 km de Barra Grande (approximativement 15 minutes en voiture).",q3:"Comment venir ?",a3:"L’aéroport le plus utilisé pour visiter la région est l’aéroport Jorge Amado (Ilhéus, Bahia).",a3Route:"Depuis Ilhéus, le trajet jusqu’à Taipu de Fora dure environ 2 h 30 à 3 h en voiture, selon l’état de la route.",q4:"Y a-t-il des restaurants et des commerces à proximité ?",a4:"Oui.",a4Nearby:"À proximité, vous trouverez des restaurants, des bars de plage, des marchés, des boulangeries et des services essentiels, pour profiter confortablement de votre séjour sans parcourir de longues distances.",q5:"Comment réserver ?",a5:"Les réservations sont effectuées via Airbnb.",a5Booking:"Cliquez sur le bouton « Réserver maintenant » du site pour consulter les disponibilités et les tarifs, puis finaliser votre réservation en toute sécurité.",q6:"Les photos représentent-elles fidèlement la propriété ?",a6:"Oui.",a6Photos:"Toutes les photographies présentées sur ce site sont réelles et représentent les espaces de la propriété, afin que vous puissiez en découvrir chaque détail avant votre arrivée.",
   }
 };
 
 let language = "pt";
-// Cole o link do Airbnb entre as aspas quando ele estiver disponível.
-const BOOKING_URL = "";
+const BOOKING_URL = "https://www.airbnb.fr/rooms/1634186480901718296?unique_share_id=cfcbe2fb-032a-4b93-9132-f1d2f625d0a5&viralityEntryPoint=1&s=76&source_impression_id=p3_1786095350_P3sDckGN043fC0so";
 const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
@@ -74,7 +68,7 @@ document.querySelectorAll("[data-lang]").forEach(button => button.addEventListen
     item.classList.toggle("active", active);
     item.setAttribute("aria-pressed", String(active));
   });
-  document.title = language === "pt" ? "Havre Taipu | Refúgio boutique na Bahia" : language === "fr" ? "Havre Taipu | Refuge boutique à Bahia" : "Havre Taipu | Boutique retreat in Bahia";
+  document.title = language === "pt" ? "Havre Taipu | Casa de Temporada em Taipu de Fora - Bahia" : language === "fr" ? "Havre Taipu | Maison de vacances à Taipu de Fora - Bahia" : "Havre Taipu | Vacation Home in Taipu de Fora - Bahia";
 }));
 
 const observer = new IntersectionObserver(entries => {
@@ -82,24 +76,75 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: .12 });
 document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
 
-const initialGallery = [...document.querySelectorAll(".gallery-item")];
-const moreImages = ["02","03","04","05","07","09","14","16","19","20"];
+const faqItems = [...document.querySelectorAll(".faq-item")];
+const faqCloseTimers = new WeakMap();
+function closeFaq(item) {
+  window.clearTimeout(faqCloseTimers.get(item));
+  item.classList.remove("is-open");
+  item.querySelector("summary").setAttribute("aria-expanded", "false");
+  faqCloseTimers.set(item, window.setTimeout(() => { item.open = false; }, 400));
+}
+faqItems.forEach(item => {
+  const summary = item.querySelector("summary");
+  summary.addEventListener("click", event => {
+    event.preventDefault();
+    if (item.classList.contains("is-open")) {
+      closeFaq(item);
+      return;
+    }
+    faqItems.filter(other => other !== item && other.open).forEach(closeFaq);
+    window.clearTimeout(faqCloseTimers.get(item));
+    item.open = true;
+    void item.offsetHeight;
+    item.classList.add("is-open");
+    summary.setAttribute("aria-expanded", "true");
+  });
+});
+
+const moreImages = ["02","03","04","07","09","14","16","19","20"];
+const moreImageAlts = {
+  "02":"Varanda coberta do Havre Taipu com mesas, rede e cozinha",
+  "03":"Varanda de madeira do Havre Taipu com vista para a piscina",
+  "04":"Piscina privativa do Havre Taipu cercada por jardim tropical",
+  "07":"Casa com piscina em Taipu de Fora Bahia",
+  "09":"Área externa do Havre Taipu com piscina e jardim",
+  "14":"Sala integrada à cozinha e à varanda do Havre Taipu",
+  "16":"Banheiro do Havre Taipu com acabamento contemporâneo",
+  "19":"Suíte climatizada da casa de temporada em Taipu de Fora",
+  "20":"Banheiro da suíte do Havre Taipu"
+};
 const moreContainer = document.querySelector("#gallery-more");
+const moreGrid = moreContainer.querySelector(".gallery-more-grid");
 const showMore = document.querySelector("#show-more");
+let galleryExpanded = false;
+let galleryCollapseTimer;
 showMore.addEventListener("click", () => {
-  const opening = moreContainer.hidden;
-  if (opening && !moreContainer.children.length) {
+  const opening = !galleryExpanded;
+  window.clearTimeout(galleryCollapseTimer);
+  if (opening && !moreGrid.children.length) {
     moreImages.forEach((number, index) => {
       const button = document.createElement("button");
       button.className = "gallery-item";
       button.dataset.full = `assets/images/havre-${number}.jpg`;
       button.setAttribute("aria-label", `Ampliar foto ${index + 7}`);
-      button.innerHTML = `<img src="assets/images/havre-${number}.jpg" alt="Ambiente real do Havre Taipu" loading="lazy">`;
-      moreContainer.append(button);
+      button.innerHTML = `<img src="assets/images/havre-${number}.jpg" alt="${moreImageAlts[number]}" loading="lazy">`;
+      moreGrid.append(button);
     });
   }
-  moreContainer.hidden = !opening;
-  showMore.textContent = translations[language][opening ? "galleryLess" : "galleryMore"];
+  galleryExpanded = opening;
+  showMore.dataset.i18n = opening ? "galleryLess" : "galleryMore";
+  showMore.textContent = translations[language][showMore.dataset.i18n];
+  showMore.setAttribute("aria-expanded", String(opening));
+  if (opening) {
+    moreContainer.hidden = false;
+    moreContainer.setAttribute("aria-hidden", "false");
+    void moreContainer.offsetHeight;
+    moreContainer.classList.add("open");
+  } else {
+    moreContainer.classList.remove("open");
+    moreContainer.setAttribute("aria-hidden", "true");
+    galleryCollapseTimer = window.setTimeout(() => { moreContainer.hidden = true; }, 500);
+  }
 });
 
 const lightbox = document.querySelector(".lightbox");
@@ -135,24 +180,6 @@ document.addEventListener("keydown", event => {
   if (event.key === "ArrowRight") stepLightbox(1);
 });
 
-const form = document.querySelector(".contact-form");
-form.addEventListener("submit", event => {
-  event.preventDefault();
-  let valid = true;
-  form.querySelectorAll("[required]").forEach(input => {
-    const field = input.closest(".field");
-    const emailInvalid = input.type === "email" && input.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
-    const invalid = !input.value.trim() || emailInvalid;
-    field.classList.toggle("invalid", invalid);
-    field.querySelector("small").textContent = invalid ? translations[language][emailInvalid ? "invalidEmail" : "required"] : "";
-    valid = valid && !invalid;
-  });
-  form.querySelector(".form-status").textContent = valid ? translations[language].formReady : "";
-});
-form.querySelectorAll("input, textarea").forEach(input => input.addEventListener("input", () => {
-  input.closest(".field").classList.remove("invalid");
-  input.closest(".field").querySelector("small").textContent = "";
-}));
 const tourPlayer = document.querySelector("[data-tour-player]");
 if (tourPlayer) {
   const tourStage = tourPlayer.querySelector(".tour-stage");
